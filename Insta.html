@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram UI CLONE</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body{
+            margin: 0;
+            font-family:Arial, Helvetica, sans-serif ;
+            background: #1f1e1e;
+            color: #262626;
+        }
+        .navbar{
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #ebe2e2;
+            border-bottom: 1px solid #dbbddb;
+        }
+        .navbar .logo{
+            font-family: cursive;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar input{
+            padding: 6px 12px;
+            border: 1px solid #dbdbdb;
+            border-radius: 6px;
+            outline: none;
+        }
+        .navbar .icon{
+            cursor: pointer;
+            margin-left: 15px;
+         }
+         .navbar span{
+            margin: 0 5px;
+         }
+        .stories{
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+            overflow-x:auto;
+            background: #edebeb;
+            border:1px solid #faf5f5;
+            margin: 10px auto;
+            max-width: 94%;
+            border-radius: 8px;
+        }
+        .story{
+            text-align: center;
+            flex:3;
+        }
+        .story img{
+           width: 60px; 
+           height: 60px;
+           border-radius: 50%;
+           border: 2px solid #e1306c;
+           padding: 2px;
+           
+        }
+        .story p{
+            font-size: 12px;
+            margin-top: 3px;
+        }
+        .post{
+            background: #fff;
+            border: 1px solid #bdbdbd;
+            margin: 10px auto;
+           max-width: 98%;
+            position: relative;
+        }
+        .post-header{
+           display: flex;
+           align-items: center;
+           padding: 10px;
+           position:absolute;
+
+        }
+        .post-header img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .post-header .username{
+            font-weight: bold;
+            color: white;
+        }
+        .post .main{
+            width: 100%;
+            display: block;
+        }
+        .post-actions{
+            justify-content:space-between;
+            padding:10px;
+            font-size: 25px;                      
+        }
+         .post-like,.post-caption{
+            padding: 0 10px 10px;
+            font-size: 14px;
+         }
+         .post-caption .username{
+            font-weight: bold;
+         }
+         .content{
+             position: fixed;
+             bottom: 0;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             background: #12070a;
+             width: 100%;
+             color: white;
+             padding: 10px 10px;
+             border: 1px solid #868383;
+         }
+         .content span{
+            margin: 0px 20px;
+            font-size: 30px;
+            cursor: pointer;
+         }
+         @media (max-width:768px){
+              .navbar input{
+                display: none;
+              }
+              .stories{
+                margin: 10px auto;
+                gap: 10px;
+            }
+            .post{
+                margin: 10px auto;
+            }
+         }
+         @media(max-width:480px){
+            .navbar{
+                padding: 8px 12px;
+            }
+            .navbar .logo{
+               font-size: 20px;
+            }
+            .story img{
+                width:50px;
+                height:50px;
+            }
+         }
+
+         
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Instagram</div>
+        <input type="text" placeholder="Search">
+        <div class="icon">
+            <span class="material-icons">favorite</span>
+            <span class="material-icons">maps_ugc</span>
+        </div>
+    </nav>
+    <section class="stories">
+        <div class="story">
+            <img src="https://picsum.photos/100?random=1" alt="">
+            <p>You</p>
+        </div>
+        <div class="story">
+            <img src="https://picsum.photos/100?random=2" alt="">
+            <p>Alex</p>
+        </div>
+        <div class="story">
+            <img src="https://picsum.photos/100?random=3" alt="">
+            <p>Tomba</p>
+        </div>
+        <div class="story">
+            <img src="https://picsum.photos/100?random=4" alt="">
+            <p>Chaoba</p>
+        </div>
+        <div class="story">
+            <img src="https://picsum.photos/100?random=5" alt="">
+            <p>GElina</p>
+        </div>
+        <div class="story">
+            <img src="https://picsum.photos/100?random=6" alt="">
+            <p>Boinu</p>
+        </div>
+        <div class="story">
+            <img src="https://picsum.photos/100?random=7" alt="">
+            <p>Damu</p>
+        </div>
+        <div class="story">
+            <img src="https://picsum.photos/100?random=8" alt="">
+            <p>Gambhir</p>
+        </div>
+        <div class="story">
+            <img src="https://picsum.photos/100?random=9" alt="">
+            <p>GElina</p>
+        </div>
+    </section>
+    <div class="post">
+        <div class="post-header">
+           <img src="https://picsum.photos/100?random=6" alt=""> 
+           <span class="username">Nature_Lovers</span>
+        </div>
+        <img class=main src="https://plus.unsplash.com/premium_photo-1675827055694-010aef2cf08f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8TkF0dXJlfGVufDB8fDB8fHww" alt="">
+        <div class="post-actions">
+            <button><span class="material-icons">favorite</span></button>
+            <button><span class="material-icons">comment</span></button>
+            <button><span class="material-icons">send</span></button>
+
+        </div>
+        <div class="post-like">123 likes</div>
+        <div class="post-caption">
+            <span class="username">Nature_Lovers</span>
+            Loving this scene of nature !
+        </div>
+    </div>
+<div class="post">
+    <div class="post-header">
+        <img src="https://picsum.photos/100?random=7" alt="">
+        <span class="username">Linkin Park</span>
+    </div>
+    <img class=main src="https://images.unsplash.com/photo-1727425812012-1173bb74591b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGxpbmtpbiUyMHBhcmt8ZW58MHx8MHx8fDA%3D" alt="">
+    <div class="post-actions">
+        <button><span class="material-icons">favorite</span></button>        
+            <button><span class="material-icons">comment</span></button>
+            <button><span class="material-icons">send</span></button>
+
+    </div>
+    <div class="post-like">1.2m likes</div>
+    <div class="post-caption">
+        <span class="username">Linkin Park</span>
+        Waiting for the end
+</div>
+</div>
+    <section class="content">
+        <span class="material-icons">home</span>
+        <span class="material-icons">search</span>
+        <span class="material-icons">add</span>
+        <span class="material-icons">movie</span>
+        <span class="material-icons">account_circle</span>
+    </section>
+           
+</body>
+</html>
